@@ -1,43 +1,39 @@
-# Canadian-Cheese-An-Excel-Data-Analysis-Project
+# Canadian Cheese: An Excel Data Analysis Project
 
-### Data Source <br>
-The dataset that I used for this project, is a dataset that I found on
-Kaggle named “Canadian Cheese Directory” posted by Noah Janes [Download here](https://www.kaggle.com/datasets/noahjanes/canadian-cheese-directory) You can
-find the data set by clicking at the embed link above. This spark a curiosity within me and making it more fun to work with. And it’s a chance to learn something new as well!
+### Data Source
+For this project, I used a dataset called the “Canadian Cheese Directory,” which I found on Kaggle, posted by Noah Janes. You can access the dataset via this [link](https://www.kaggle.com/datasets/noahjanes/canadian-cheese-directory). The dataset piqued my curiosity, making the analysis both engaging and a valuable learning experience.
 
 ### Objectives
-- Clean and prepare the data for analysis
-- Use Pivot Tables and slicers to analyse the data
-- Create an interactive dashboard for visualization
-  
+- Clean and prepare the data for analysis.
+- Utilize Pivot Tables and slicers to explore the data.
+- Create an interactive dashboard for visualization.
+
 ### Tools
 - Microsoft Excel
 
-### Data Cleaning/Preparation
-- The format file of the data is a '.csv', a comma separated value. So I use Power Query to load the data, transforming it from a csv file to an excel file.
+### Data Cleaning and Preparation
+- The dataset was in a '.csv' format (comma-separated values), so I used Power Query to import and transform the data from a CSV file into an Excel file.
 
-- Use the ``` =COUNTBLANK(cheese_data[CheeseID] ``` formula to check for any null values
+- I used the formula `=COUNTBLANK(cheese_data[CheeseID])` to check for any missing values.
 
-- Created a new column beside to the 'ManufacturerProvCode' column and named it 'ManufacturerProvName', on this new column I used the if conditional function to create actual real    province names instead of usin the abbreviated ones in the 'ManufacturerProvCode' column
+- I added a new column next to 'ManufacturerProvCode' called 'ManufacturerProvName'. Using an IF function, I replaced the province abbreviations in 'ManufacturerProvCode' with their full names for clarity:
 
-  ``` =IF(B2="NB","New Brunswick",IF(B2="AB","Alberta",IF(B2="BC","British Columbia",IF(B2="MB","Manitoba",IF(B2="NL","Newfoundland and Labrador",IF(B2="NS","Nova  Scotia",IF(B2="ON","Ontario",IF(B2="PE","Prince Edward Island",IF(B2="QC","Quebec",IF(B2="SK","Saskatchewan","")))))))))) ``` Thus creating this
+  ``` 
+  =IF(B2="NB","New Brunswick",IF(B2="AB","Alberta",IF(B2="BC","British Columbia",IF(B2="MB","Manitoba",IF(B2="NL","Newfoundland and Labrador",IF(B2="NS","Nova Scotia",IF(B2="ON","Ontario",IF(B2="PE","Prince Edward Island",IF(B2="QC","Quebec",IF(B2="SK","Saskatchewan",""))))))))))
+  ```
 
-- Selected the MoisturePercent column and used the data analysis to find the ‘Descriptive Statistics’. Note: You can also use the AVG (average) excel function to find the mean of
- ‘MoisturePercent’.   
+- I analyzed the 'MoisturePercent' column using Excel’s Data Analysis Tool to generate 'Descriptive Statistics'. Alternatively, the `AVERAGE` function can be used to calculate the mean of 'MoisturePercent'.
 
-- Changing the Organic Value, By using the ‘Find and Replace’ method just like before, We can replace ‘0’ into a ‘No’ and ‘1’ into a ‘Yes’. Considering it is easier to understand  ‘Yes’ and ‘No’ rather than ‘0’ and ‘1’. And it will be better considering we might using
-the ‘Organic’ column as a slicer in the future.
+- I modified the 'Organic' column values using the 'Find and Replace' feature: replacing '0' with 'No' and '1' with 'Yes' for better readability, especially if the 'Organic' column is used as a slicer in the dashboard.
 
 ### Data Exploration
 
-EDA involved exploring the data to answer key questions, such as:
+Exploratory Data Analysis (EDA) focused on answering several key questions:
 
-- What is the most commonly used milk type for cheese production in Canada?
-- What are the top three cheese-producing varieties provinces in Canada?
-- What are the highest and lowest average moisture percentages in cheese, categorized by cheese type and fat level?
+- What is the most commonly used milk type in Canadian cheese production?
+- Which are the top three cheese-producing provinces in Canada?
+- What are the highest and lowest average moisture percentages in cheese, categorized by cheese type and fat content?
 
 ### References
-
-- The Importance of Data Analytics in Today's Business World https://dataforest.ai/blog/the-importance-of-data-analytics-in-todays-business-world
-- Clean Data from Excel, CSV, PDF, and Google Sheets with Data Interpreter https://help.tableau.com/current/pro/desktop/en-us/data_interpreter.htm
-
+- [The Importance of Data Analytics in Today's Business World](https://dataforest.ai/blog/the-importance-of-data-analytics-in-todays-business-world)
+- [Clean Data from Excel, CSV, PDF, and Google Sheets with Data Interpreter](https://help.tableau.com/current/pro/desktop/en-us/data_interpreter.htm)
